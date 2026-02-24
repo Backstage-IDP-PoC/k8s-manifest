@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lb-ui-test2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lb-ui-test2
+  template:
+    metadata:
+      labels:
+        app: lb-ui-test2
+    spec:
+      containers:
+        - name: lb-ui-test2
+          image: sureshmavp1/lb-ui-test2:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
