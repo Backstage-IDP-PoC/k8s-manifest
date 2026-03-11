@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app9-sm-mar11
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app9-sm-mar11
+  template:
+    metadata:
+      labels:
+        app: app9-sm-mar11
+    spec:
+      containers:
+        - name: app9-sm-mar11
+          image: sureshmavp1/app9-sm-mar11:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
