@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app12-sm-mar12
-          image: sureshmavp1/app12-sm-mar12:1.0.1
+          image: sureshmavp1/app12-sm-mar12:1.0.2
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
