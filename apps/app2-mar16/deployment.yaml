@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app2-mar16
-          image: sureshmavp1/app2-mar16:1.0.2
+          image: sureshmavp1/app2-mar16:1.0.3
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
