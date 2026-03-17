@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssp-demo2-mar17
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssp-demo2-mar17
+  template:
+    metadata:
+      labels:
+        app: ssp-demo2-mar17
+    spec:
+      containers:
+        - name: ssp-demo2-mar17
+          image: sureshmavp1/ssp-demo2-mar17:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
