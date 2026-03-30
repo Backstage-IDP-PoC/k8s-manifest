@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-repo-mar-30-test1
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: dev-repo-mar-30-test1
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Backstage-IDP-PoC/k8s-manifest.git
+    targetRevision: main
+    path: apps/dev-repo-mar-30-test1
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
