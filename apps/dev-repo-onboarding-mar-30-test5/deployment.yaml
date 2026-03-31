@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dev-repo-onboarding-mar-30-test5
-          image: sureshmavp1/dev-repo-onboarding-mar-30-test5:1.0.2
+          image: sureshmavp1/dev-repo-onboarding-mar-30-test5:1.0.3
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
