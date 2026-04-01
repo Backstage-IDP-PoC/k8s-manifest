@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gssp-dev1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gssp-dev1
+  template:
+    metadata:
+      labels:
+        app: gssp-dev1
+    spec:
+      containers:
+        - name: gssp-dev1
+          image: sureshmavp1/gssp-dev1:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
