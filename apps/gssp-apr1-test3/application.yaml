@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gssp-apr1-test3
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: gssp-apr1-test3
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Backstage-IDP-PoC/k8s-manifest.git
+    targetRevision: main
+    path: apps/gssp-apr1-test3
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
