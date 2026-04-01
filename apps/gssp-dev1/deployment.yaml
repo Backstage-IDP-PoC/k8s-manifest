@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gssp-dev1
-          image: sureshmavp1/gssp-dev1:1.0.1
+          image: sureshmavp1/gssp-dev1:1.0.2
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
