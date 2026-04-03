@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dssp-3apr-01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dssp-3apr-01
+  template:
+    metadata:
+      labels:
+        app: dssp-3apr-01
+    spec:
+      containers:
+        - name: dssp-3apr-01
+          image: sureshmavp1/dssp-3apr-01:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
