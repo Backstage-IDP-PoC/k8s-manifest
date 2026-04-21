@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-21apr-03
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-21apr-03
+  template:
+    metadata:
+      labels:
+        app: test-21apr-03
+    spec:
+      containers:
+        - name: test-21apr-03
+          image: sureshmavp1/test-21apr-03:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
