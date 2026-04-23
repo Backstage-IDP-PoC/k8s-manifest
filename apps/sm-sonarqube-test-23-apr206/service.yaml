@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sm-sonarqube-test-23-apr206
+spec:
+  selector:
+    app: sm-sonarqube-test-23-apr206
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer

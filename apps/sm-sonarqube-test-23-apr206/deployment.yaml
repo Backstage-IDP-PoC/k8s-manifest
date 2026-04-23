@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sm-sonarqube-test-23-apr206
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sm-sonarqube-test-23-apr206
+  template:
+    metadata:
+      labels:
+        app: sm-sonarqube-test-23-apr206
+    spec:
+      containers:
+        - name: sm-sonarqube-test-23-apr206
+          image: sureshmavp1/sm-sonarqube-test-23-apr206:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
