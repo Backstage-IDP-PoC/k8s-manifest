@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sonar-vault-demo-apr-27-01
+  labels:
+    backstage.io/kubernetes-id: sonar-vault-demo-apr-27-01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sonar-vault-demo-apr-27-01
+  template:
+    metadata:
+      labels:
+        app: sonar-vault-demo-apr-27-01
+        backstage.io/kubernetes-id: sonar-vault-demo-apr-27-01
+    spec:
+      containers:
+        - name: sonar-vault-demo-apr-27-01
+          image: sureshmavp1/sonar-vault-demo-apr-27-01:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
