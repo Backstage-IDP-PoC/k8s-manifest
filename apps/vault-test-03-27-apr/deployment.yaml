@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault-test-03-27-apr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vault-test-03-27-apr
+  template:
+    metadata:
+      labels:
+        app: vault-test-03-27-apr
+    spec:
+      containers:
+        - name: vault-test-03-27-apr
+          image: sureshmavp1/vault-test-03-27-apr:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
