@@ -10,3 +10,22 @@ spec:
       port: 80
       targetPort: 3000
   type: LoadBalancer
+
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: gssp-dockerized-30-apr-03-ingress
+# spec:
+#   ingressClassName: gce
+#   rules:
+#   - host: gssp-dockerized-30-apr-03.example.com
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: gssp-dockerized-30-apr-03
+#             port:
+#               number: 80
