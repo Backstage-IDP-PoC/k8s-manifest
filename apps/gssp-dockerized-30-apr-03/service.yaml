@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gssp-dockerized-30-apr-03
+spec:
+  selector:
+    app: gssp-dockerized-30-apr-03
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
