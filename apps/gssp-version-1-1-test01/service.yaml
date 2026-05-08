@@ -1,12 +1,31 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ${APP_NAME}
+  name: gssp-version-1-1-test01
 spec:
   selector:
-    app: ${APP_NAME}
+    app: gssp-version-1-1-test01
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3000
   type: LoadBalancer
+
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: gssp-version-1-1-test01-ingress
+# spec:
+#   ingressClassName: gce
+#   rules:
+#   - host: gssp-version-1-1-test01.example.com
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: gssp-version-1-1-test01
+#             port:
+#               number: 80
