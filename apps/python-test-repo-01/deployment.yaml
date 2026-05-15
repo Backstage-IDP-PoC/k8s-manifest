@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: python-test-repo-01
-          image: sureshmavp1/python-test-repo-01:1.0.6
+          image: sureshmavp1/python-test-repo-01:1.0.9
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
