@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: sm-java-test-repo-01
-          image: sureshmavp1/sm-java-test-repo-01:1.0.4
+          image: sureshmavp1/sm-java-test-repo-01:1.0.9
           ports:
             - containerPort: 8080
           env:
