@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sm-python-test-repo-01
+  labels:
+    backstage.io/kubernetes-id: sm-python-test-repo-01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sm-python-test-repo-01
+  template:
+    metadata:
+      labels:
+        app: sm-python-test-repo-01
+        backstage.io/kubernetes-id: sm-python-test-repo-01
+    spec:
+      containers:
+        - name: sm-python-test-repo-01
+          image: sureshmavp1/sm-python-test-repo-01:1.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
